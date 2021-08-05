@@ -1,7 +1,16 @@
 # Проект 4: Место-React
 ### Место - это интерактивная страница, куда можно добавлять фотографии, удалять их и ставить лайки. 
 ### Данная работа выполнена на основе таких технологий как:
-* (ПРОПИСАТЬ ТЕХНОЛОГИИ)
+* React
+* React Router
+* Nested BEM
+* JSX
+* Адаптивная верстка
+* Node.js
+* Express.js
+* REST API
+* MongoDB
+* Mongoose
 
 ### Ссылки:
 * [FRONTEND](https://mesto.boev.nomoredomains.club)
