@@ -77,7 +77,7 @@ class Api {
 
   // Лайк карточки
   likeCard(id, like) {
-    return fetch(`${this._url}/cards/likes/${id}`, {
+    return fetch(`${this._url}/cards/${id}/likes`, {
       method: like ? 'PUT' : 'DELETE',
       headers: this._headers,
     }).then(this._getStatus)

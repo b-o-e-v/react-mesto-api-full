@@ -114,7 +114,7 @@ export default function App() {
   }
 
   function handleLikeCard(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id)
+    const isLiked = card.likes.some(i => i === currentUser._id)
 
     api
       .likeCard(card._id, !isLiked)
@@ -129,7 +129,10 @@ export default function App() {
     api
       .addCard(item)
       .then((res) => {
-        setCards([res, ...cards])
+        console.log(res)
+        console.log(cards)
+
+        setCards([...cards, res.card])
         closeAllPopups()
       })
       .catch((error) => {
@@ -155,8 +158,8 @@ export default function App() {
   function handleRegister(email, password) {
     register(email, password)
       .then((res) => {
-        if (res) {
-          handleConfirmRegister(true, 'Вы успешно зарегистрировались!')
+        if (res.message) {
+          handleConfirmRegister(true, res.message)
           history.push('/sign-in')
         } else {
           handleConfirmRegister(false, 'Что-то пошло не так! Попробуйте ещё раз.')
@@ -181,7 +184,7 @@ export default function App() {
         .then((res) => {
           if (res) {
             setLoggedIn(true)
-            setEmail(res.data.email)
+            setEmail(res.email)
             history.push('/')
           }
         })

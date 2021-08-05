@@ -48,7 +48,7 @@ export default function Main({
               onCardDelete={onCardDelete}
               onCardLike={onCardLike}
             />
-          ))}
+          )).reverse()}
         </ul>
       </section>
     </main>

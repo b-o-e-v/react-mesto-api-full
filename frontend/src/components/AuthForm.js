@@ -32,6 +32,7 @@ export default function AuthForm({
             required
             placeholder='Пароль'
             minLength='8'
+            autoComplete='off'
           />
         </fieldset>
         <button className='auth__btn' type='submit'>
