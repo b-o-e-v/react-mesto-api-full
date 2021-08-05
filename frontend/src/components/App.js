@@ -159,10 +159,10 @@ export default function App() {
     register(email, password)
       .then((res) => {
         if (res.message) {
-          handleConfirmRegister(true, res.message)
+          handleConfirmRegister(false, 'Что-то пошло не так! Попробуйте ещё раз.')
           history.push('/sign-in')
         } else {
-          handleConfirmRegister(false, 'Что-то пошло не так! Попробуйте ещё раз.')
+          handleConfirmRegister(true, 'Вы зарегистрированы!')
         }
       })
       .catch((err) => {
