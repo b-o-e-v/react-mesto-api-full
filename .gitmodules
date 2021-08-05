@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/b-o-e-v/express-mesto.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/b-o-e-v/react-mesto-auth.git
