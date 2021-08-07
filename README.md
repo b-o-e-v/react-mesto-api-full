@@ -13,5 +13,6 @@
 * Mongoose
 
 ### Ссылки:
+* Публичный IPv4: 178.154.206.215
 * [FRONTEND](https://mesto.boev.nomoredomains.club)
 * [BACKEND](https://api.mesto.boev.nomoredomains.club)
